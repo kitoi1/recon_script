@@ -1,0 +1,11 @@
+jq >= 1.6
+parallel >= 20201222
+subfinder >= 2.4.5
+assetfinder >= 1.1.1
+amass >= 3.10.5
+findomain >= 2.1.4
+dnsx >= 1.0.3
+httpx >= 1.1.0
+nuclei >= 2.3.7
+gau >= 1.0.3
+aquatone >= 1.7.0
