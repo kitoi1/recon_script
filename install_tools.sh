@@ -1,10 +1,7 @@
-
-## install_tools.sh
-
-```bash
 #!/bin/bash
 
 # Recon Suite Tool Installer
+# Fixed version without syntax errors
 
 echo "[*] Installing required tools..."
 
@@ -31,11 +28,17 @@ GO_TOOLS=(
 
 for tool in "${GO_TOOLS[@]}"; do
     echo "[*] Installing $tool"
-    go install $tool
+    go install "$tool"
 done
 
 # Add Go binaries to PATH
-echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+if ! grep -q 'go/bin' ~/.bashrc; then
+    echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+    echo "[*] Added Go binaries to PATH in ~/.bashrc"
+fi
+
+# Source bashrc to update current session
 source ~/.bashrc
 
 echo "[+] Installation complete!"
+echo "[!] Please restart your terminal or run 'source ~/.bashrc' to update your PATH"
