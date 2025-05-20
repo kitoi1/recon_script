@@ -18,5 +18,5 @@ An advanced reconnaissance tool that performs comprehensive subdomain enumeratio
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/recon-suite.git
+   git clone https://github.com/kitoi1/recon-suite.git
    cd recon-suite
